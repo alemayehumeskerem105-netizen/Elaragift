@@ -1,9 +1,9 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { motion } from "framer-motion";
 
 type Variant = "primary" | "secondary" | "ghost";
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+type Props = ComponentPropsWithoutRef<typeof motion.button> & {
   children: ReactNode;
   variant?: Variant;
   fullWidth?: boolean;
