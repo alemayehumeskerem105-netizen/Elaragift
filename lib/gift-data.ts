@@ -4,11 +4,11 @@ export type Gift = {
   id: string;
   name: string;
   price: number;
-  image: string;
+  image: string; // external URL supported
   category: GiftCategory;
   description: string;
   stock: number;
-  discount?: number; // percentage discount (0-100)
+  discount?: number;
 };
 
 export const categories: GiftCategory[] = [
@@ -27,8 +27,7 @@ export const gifts: Gift[] = [
     price: 1450,
     image: "https://media.istockphoto.com/id/1218487059/photo/fresh-fruit-cream-cake.jpg?s=612x612&w=0&k=20&c=HeTM_oneGotZ_BMDf08dV_F05SVS589XJtOFEH7wkG0=",
     category: "Cakes",
-    description:
-      "Soft vanilla sponge with fresh strawberries and whipped cream.",
+    description: "Soft vanilla sponge with fresh strawberries and whipped cream.",
     stock: 15,
     discount: 10,
   },
@@ -60,6 +59,7 @@ export const gifts: Gift[] = [
     stock: 20,
     discount: 15,
   },
+
   // Flowers
   {
     id: "flowers-1",
@@ -98,6 +98,7 @@ export const gifts: Gift[] = [
     description: "Nine white roses for pure, timeless love.",
     stock: 22,
   },
+
   // Dolls
   {
     id: "doll-1",
@@ -118,8 +119,7 @@ export const gifts: Gift[] = [
     stock: 28,
     discount: 20,
   },
-  
-  
+
   // Scarves
   {
     id: "scarf-1",
@@ -149,9 +149,8 @@ export const gifts: Gift[] = [
     stock: 14,
     discount: 10,
   },
-  
+
   // Chocolates
-  
   {
     id: "choco-2",
     name: "Dark Romance Truffles",
@@ -170,7 +169,6 @@ export const gifts: Gift[] = [
     description: "Heart-shaped chocolates with strawberry cream.",
     stock: 30,
   },
-  
 ];
 
 export function getGiftsByCategory(category: GiftCategory): Gift[] {
